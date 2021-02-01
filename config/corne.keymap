@@ -8,49 +8,125 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DV_A A
+#define DV_B N
+#define DV_C I
+#define DV_D H
+#define DV_E E
+#define DV_F Y
+#define DV_G U
+#define DV_H J
+#define DV_I G
+#define DV_J C
+#define DV_K V
+#define DV_L P
+#define DV_M M
+#define DV_N L
+#define DV_O S
+#define DV_P R
+#define DV_Q X
+#define DV_R O
+#define DV_S SEMI
+#define DV_T K
+#define DV_U F
+#define DV_V DOT
+#define DV_W COMMA
+#define DV_X B
+#define DV_Y T
+#define DV_Z FSLH
+#define DV_SEMI Z
+#define DV_SQT Q
+#define DV_COMMA W
+#define DV_DOT E
+#define DV_FSLH LBKT
+#define DV_QMARK LBRC
+#define DV_MINUS SQT
+#define DV_UNDER DQT
+#define DV_EQUAL RBKT
+#define DV_PLUS RBRC
+#define DV_LBKT MINUS
+#define DV_RBKT EQUAL
+#define DV_LBRC UNDER
+#define DV_RBRC PLUS
+
+#define SYMBOL 1
+#define NUMBERS 2
+#define NAVETC 3
+
 / {
+        behaviors {
+            hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS";
+                #binding-cells = <2>;
+                tapping_term_ms = <150>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// | TAB  |  '  |  ,  |  .  |  p     |  y  |   |  f  |  g   |  c  |  r  |  l  | NO |
+// | ESC  |  a  |  o  |  e  |  u     |  i  |   |  d  |  h   |  t  |  n  |  s  | -  |
+// | NO   |  ;  |  q  |  j  |  k     |  x  |   |  b  |  m   |  w  |  v  |  z  | NO |
+//                    | NUM | BSPC SYM | NO? |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+   &kp TAB   &kp DV_SQT    &kp DV_COMMA  &kp DV_DOT    &kp DV_P        &kp DV_Y   &kp DV_F &kp DV_G          &kp DV_C      &kp DV_R      &kp DV_L      &none
+   &kp ESC   &hm LALT DV_A &hm LCTL DV_O &hm LSFT DV_E &hm LGUI DV_U   &kp DV_I   &kp DV_D &hm LGUI DV_H     &hm LSFT DV_T &hm LCTL DV_N &hm LALT DV_S &kp DV_MINUS
+   &none     &kp DV_SEMI   &kp DV_Q      &kp DV_J      &kp DV_K        &kp DV_X   &kp DV_B &kp DV_M          &kp DV_W      &kp DV_V      &kp DV_Z      &none
+                                         &to NUMBERS   &lt SYMBOL BSPC &none      &kp RET &lt NAVETC SPACE 2 &none
                         >;
                 };
-                lower_layer {
+                symbol_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | |      |      |       |       |       |   |  {  |  &  |  *  |  (  |  }  | |
+// | | LALT | LCTL | LSFT  | LGUI  |       |   |  ?  |  $  |  %  |  ^  |  +  | |
+// | |      |      |       |       |       |   |  ~  |  !  |  @  |  #  |  |  | |
+//                 | trans | trans | trans |   |  (  |  )  |  _  |
+
                         bindings = <
-   &kp ESC    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5            &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans            &trans   &trans   &trans &trans    &trans &trans
-                                        &kp LGUI     &trans       &kp SPACE         &kp RET &trans &kp RALT
+                        FIXME: dvorak
+   &none &none &none &none  &none  &none   &kp DV_LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp DV_RBRC
+   &none LALT  LCTL  LSFT   LGUI   &none   &kp DV_QMARK &kp DOLLAR &kp PERCENT &kp CARET &kp DV_PLUS
+   &none &none &none &none  &none  &none   &kp TILDE    &kp EXCL   &kp AT      &kp HASH  &kp DV_PIPE
+                     &trans &trans &trans  &kp LPAR     &kp RPAR   &kp DV_UNDER
+
                         >;
                 };
 
-                raise_layer {
+                number_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |  ~   | // TODO: Fix this row when &mkp is committed
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | |      |      |       |       |       |   |  [  |  7  |  8  |  9  |  ]  | |
+// | | LALT | LCTL | LSFT  | LGUI  |       |   |  /  |  4  |  5  |  6  |  =  | |
+// | |      |      |       |       |       |   |  `  |  1  |  2  |  3  |  \  | |
+//                 | trans | trans | trans |   |  .  |  0  |  -  |
                         bindings = <
-   &kp  ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &bt BT_CLR
-   &kp LCTRL &trans    &trans  &trans    &trans    &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE &kp GRAVE
-   &kp LSHFT &trans    &trans  &trans    &trans    &trans      &trans    &trans    &trans          &trans   &kp BSLH &kp TILDE
-                                   &kp LGUI &trans &kp SPACE   &kp RET &trans &kp RALT
+                        FIXME: dvorak
+   &none &none &none &none  &none  &none   &kp DV_LBKT &kp N7 &kp N8       &kp N9 &kp DV_RBKT
+   &none LALT  LCTL  LSFT   LGUI   &none   &kp DV_FSLH &kp N4 &kp N5       &kp N6 &kp DV_EQUAL
+   &none &none &none &none  &none  &none   &kp GRAVE   &kp N1 &kp N2       &kp N3 &kp DV_BSLH
+                     &trans &trans &trans  &kp DV_DOT  &kp N0 &kp DV_MINUS
                         >;
+                };
+
+                navetc_layer {
+// -----------------------------------------------------------------------------------------
+// | LGUI(GRAVE) | BT_SEL 0 | BT_SEL 1 | BT_SEL 2      | BT_SEL 3      | BT_CLR |       | PGUP | HOME | UP   | END   | | |
+// |             |          |          | LGUI(DV_LBRC) | LGUI(DV_RBRC) |        |       | PGDN | LEFT | DOWN | RIGHT | | |
+// |             |          |          | LGUI(DV_LBRK) | LGUI(DV_RBRK) |        |       |      | mute | vold | volu  |
+
+// | | | |       |       |       |   |  /  |  4  |  5  |  6  |  =  | |
+// | | | |       |       |       |   |  `  |  1  |  2  |  3  |  \  | |
+//       | trans | trans | trans |   |  .  |  0  |  -  |
+   &none &none &none &none &none &none &none &none &none &none &none &none
+   &none &none &none &none &none &none &none &none &none &none &none &none
+   &none &none &none &none &none &none &none &none &none &none &none &none
+                     &trans &trans &trans &trans &trans &trans
+
                 };
         };
 };
