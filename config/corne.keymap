@@ -119,7 +119,7 @@
                         bindings = <
    &kp LG(GRAVE) &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR     &kp PG_UP &kp HOME   &kp UP         &kp END      &none &none
    &none         &none        &none        &kp LG(DV_LBRC) &kp LG(DV_LBRC) &none          &kp PG_DN &kp LEFT   &kp DOWN       &kp RIGHT    &none &none
-   &none         &none        &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &none     &kp K_MUTE &kp C_VOL_DOWN &kp C_VOL_UP &none &none
+   &none         &none        &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &none     &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &none &none
                                            &trans          &trans          &trans         &trans    &trans     &trans
                         >;
 
