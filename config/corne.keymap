@@ -118,7 +118,7 @@
 // |             |          |          | LGUI(DV_LBRK) | LGUI(DV_RBRK) |        |       |      | mute | vold | volu  |
                         bindings = <
    &none &none &none &none &none &none &none &none &none &none &none &none
-   &none &none &none &none &none &none &none &none &none &none &none &none
+   &none &none &none &none &none &none &none &none &none &none &none &kp DV_Q
    &none &none &none &none &none &none &none &none &none &none &none &none
                      &trans &trans &trans &trans &trans &trans
                         >;
