@@ -115,12 +115,12 @@
 // -----------------------------------------------------------------------------------------
 // | LGUI(GRAVE) | BT_SEL 0 | BT_SEL 1 | BT_SEL 2      | BT_SEL 3      | BT_CLR |       | PGUP | HOME | UP   | END   | | |
 // |             |          |          | LGUI(DV_LBRC) | LGUI(DV_RBRC) |        |       | PGDN | LEFT | DOWN | RIGHT | | |
-// |             |          |          | LGUI(DV_LBRK) | LGUI(DV_RBRK) |        |       |      | mute | vold | volu  |
+// |             |          |          | LGUI(DV_LBKT) | LGUI(DV_RBKT) |        |       |      | mute | vold | volu  |
                         bindings = <
-   &none &none &none &none &none &none &none &none &none &none &none &none
-   &none &none &none &none &none &none &none &none &none &none &none &kp DV_Q
-   &none &none &none &none &none &none &none &none &none &none &none &none
-                     &trans &trans &trans &trans &trans &trans
+   &kp LG(GRAVE) &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR     &kp PG_UP &kp HOME   &kp UP         &kp END      &none &none
+   &none         &none        &none        &kp LG(DV_LBRC) &kp LG(DV_LBRC) &none          &kp PG_DN &kp LEFT   &kp DOWN       &kp RIGHT    &none &none
+   &none         &none        &none        &kp LG(DV_LBRK) &kp LG(DV_RBRK) &none          &none     &kp K_MUTE &kp C_VOL_DOWN &kp C_VOL_UP &none &none
+                                           &trans          &trans          &trans         &trans    &trans     &trans
                         >;
 
                 };
