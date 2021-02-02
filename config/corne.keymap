@@ -89,7 +89,6 @@
 //                 | trans | trans | trans |   |  (  |  )  |  _  |
 
                         bindings = <
-                        FIXME: dvorak
    &none &none &none &none  &none  &none   &kp DV_LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp DV_RBRC
    &none LALT  LCTL  LSFT   LGUI   &none   &kp DV_QMARK &kp DOLLAR &kp PERCENT &kp CARET &kp DV_PLUS
    &none &none &none &none  &none  &none   &kp TILDE    &kp EXCL   &kp AT      &kp HASH  &kp DV_PIPE
@@ -105,7 +104,6 @@
 // | |      |      |       |       |       |   |  `  |  1  |  2  |  3  |  \  | |
 //                 | trans | trans | trans |   |  .  |  0  |  -  |
                         bindings = <
-                        FIXME: dvorak
    &none &none &none &none  &none  &none   &kp DV_LBKT &kp N7 &kp N8       &kp N9 &kp DV_RBKT
    &none LALT  LCTL  LSFT   LGUI   &none   &kp DV_FSLH &kp N4 &kp N5       &kp N6 &kp DV_EQUAL
    &none &none &none &none  &none  &none   &kp GRAVE   &kp N1 &kp N2       &kp N3 &kp DV_BSLH
@@ -122,10 +120,12 @@
 // | | | |       |       |       |   |  /  |  4  |  5  |  6  |  =  | |
 // | | | |       |       |       |   |  `  |  1  |  2  |  3  |  \  | |
 //       | trans | trans | trans |   |  .  |  0  |  -  |
+                        bindings = <
    &none &none &none &none &none &none &none &none &none &none &none &none
    &none &none &none &none &none &none &none &none &none &none &none &none
    &none &none &none &none &none &none &none &none &none &none &none &none
                      &trans &trans &trans &trans &trans &trans
+                        >;
 
                 };
         };
