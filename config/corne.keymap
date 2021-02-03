@@ -91,10 +91,10 @@
 //                 | trans | trans | trans |   |  (  |  )  |  _  |
 
    //                      bindings = <
-   // &none &none &none &none  &none  &none   &kp DV_LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp DV_RBRC
-   // &none LALT  LCTL  LSFT   LGUI   &none   &kp DV_QMARK &kp DOLLAR &kp PERCENT &kp CARET &kp DV_PLUS
-   // &none &none &none &none  &none  &none   &kp TILDE    &kp EXCL   &kp AT      &kp HASH  &kp PIPE
-   //                   &trans &trans &trans  &kp LPAR     &kp RPAR   &kp DV_UNDER
+   // &none &none    &none    &none    &none    &none   &kp DV_LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp DV_RBRC
+   // &none &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp DV_QMARK &kp DOLLAR &kp PERCENT &kp CARET &kp DV_PLUS
+   // &none &none    &none    &none    &none    &none   &kp TILDE    &kp EXCL   &kp AT      &kp HASH  &kp PIPE
+   //                         &trans   &trans   &trans  &kp LPAR     &kp RPAR   &kp DV_UNDER
 
    //                      >;
    //              };
@@ -113,18 +113,18 @@
                         >;
                 };
 
-//                 navetc_layer {
-// // -----------------------------------------------------------------------------------------
-// // | LGUI(GRAVE) | BT_SEL 0 | BT_SEL 1 | BT_SEL 2      | BT_SEL 3      | BT_CLR |       | PGUP | HOME | UP   | END   | | |
-// // |             |          |          | LGUI(DV_LBRC) | LGUI(DV_RBRC) |        |       | PGDN | LEFT | DOWN | RIGHT | | |
-// // |             |          |          | LGUI(DV_LBKT) | LGUI(DV_RBKT) |        |       |      | mute | vold | volu  |
-//                         bindings = <
-//    &kp LG(GRAVE) &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR     &kp PG_UP &kp HOME   &kp UP         &kp END      &none &none
-//    &none         &none        &none        &kp LG(DV_LBRC) &kp LG(DV_LBRC) &none          &kp PG_DN &kp LEFT   &kp DOWN       &kp RIGHT    &none &none
-//    &none         &none        &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &none     &kp K_MUTE &kp C_VOL_DN   &kp C_VOL_UP &none &none
-//                                            &trans          &trans          &trans         &trans    &trans     &trans
-//                         >;
+                navetc_layer {
+// -----------------------------------------------------------------------------------------
+// | LGUI(GRAVE) | BT_SEL 0 | BT_SEL 1 | BT_SEL 2      | BT_SEL 3      | BT_CLR |       | PGUP | HOME | UP   | END   | | |
+// |             |          |          | LGUI(DV_LBRC) | LGUI(DV_RBRC) |        |       | PGDN | LEFT | DOWN | RIGHT | | |
+// |             |          |          | LGUI(DV_LBKT) | LGUI(DV_RBKT) |        |       |      | mute | vold | volu  |
+                        bindings = <
+   &kp LG(GRAVE) &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR     &kp PG_UP &kp HOME   &kp UP         &kp END      &none &none
+   &none         &none        &none        &kp LG(DV_LBRC) &kp LG(DV_LBRC) &none          &kp PG_DN &kp LEFT   &kp DOWN       &kp RIGHT    &none &none
+   &none         &none        &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &none     &kp K_MUTE &kp C_VOL_DN   &kp C_VOL_UP &none &none
+                                           &trans          &trans          &trans         &trans    &trans     &trans
+                        >;
 
-//                 };
+                };
         };
 };
