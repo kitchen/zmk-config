@@ -83,21 +83,21 @@
 //                                          &mo NUMBERS   &lt SYMBOLS BSPC &none      &kp RET  &lt NAVETC SPACE 2 &none
 //                         >;
 //                 };
-                // symbol_layer {
-// -----------------------------------------------------------------------------------------
-// | |      |      |       |       |       |   |  {  |  &  |  *  |  (  |  }  | |
-// | | LALT | LCTL | LSFT  | LGUI  |       |   |  ?  |  $  |  %  |  ^  |  +  | |
-// | |      |      |       |       |       |   |  ~  |  !  |  @  |  #  |  |  | |
-//                 | trans | trans | trans |   |  (  |  )  |  _  |
+                symbol_layer {
+-----------------------------------------------------------------------------------------
+| |      |      |       |       |       |   |  {  |  &  |  *  |  (  |  }  | |
+| | LALT | LCTL | LSFT  | LGUI  |       |   |  ?  |  $  |  %  |  ^  |  +  | |
+| |      |      |       |       |       |   |  ~  |  !  |  @  |  #  |  |  | |
+                | trans | trans | trans |   |  (  |  )  |  _  |
 
-   //                      bindings = <
-   // &none &none    &none    &none    &none    &none   &kp DV_LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp DV_RBRC
-   // &none &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp DV_QMARK &kp DOLLAR &kp PERCENT &kp CARET &kp DV_PLUS
-   // &none &none    &none    &none    &none    &none   &kp TILDE    &kp EXCL   &kp AT      &kp HASH  &kp PIPE
-   //                         &trans   &trans   &trans  &kp LPAR     &kp RPAR   &kp DV_UNDER
+                        bindings = <
+   &none &none    &none    &none    &none    &none   &kp DV_LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp DV_RBRC
+   &none &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp DV_QMARK &kp DOLLAR &kp PERCENT &kp CARET &kp DV_PLUS
+   &none &none    &none    &none    &none    &none   &kp TILDE    &kp EXCL   &kp AT      &kp HASH  &kp PIPE
+                           &trans   &trans   &trans  &kp LPAR     &kp RPAR   &kp DV_UNDER
 
-   //                      >;
-   //              };
+                        >;
+                };
 
                 number_layer {
 // -----------------------------------------------------------------------------------------
