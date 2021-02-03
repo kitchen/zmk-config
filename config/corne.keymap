@@ -52,37 +52,37 @@
 #define SYMBOLS 1
 #define NUMBERS 2
 #define NAVETC 3
-// / {
-//         behaviors {
-//             hm: homerow_mods {
-//                 compatible = "zmk,behavior-hold-tap";
-//                 label = "HOMEROW_MODS";
-//                 #binding-cells = <2>;
-//                 tapping_term_ms = <150>;
-//                 flavor = "tap-preferred";
-//                 bindings = <&kp>, <&kp>;
-//             };
-//         };
-// };
+/ {
+        behaviors {
+            hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS";
+                #binding-cells = <2>;
+                tapping_term_ms = <150>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+        };
+};
 
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
-//                 default_layer {
-// // -----------------------------------------------------------------------------------------
-// // | TAB  |  '  |  ,  |  .  |  p     |  y  |   |  f  |  g   |  c  |  r  |  l  | NO |
-// // | ESC  |  a  |  o  |  e  |  u     |  i  |   |  d  |  h   |  t  |  n  |  s  | -  |
-// // | NO   |  ;  |  q  |  j  |  k     |  x  |   |  b  |  m   |  w  |  v  |  z  | NO |
-// //                    | NUM | BSPC SYM | NO? |   | ENT | RSE  | ALT |
-//                         bindings = <
-//    &kp TAB   &kp DV_SQT    &kp DV_COMMA  &kp DV_DOT    &kp DV_P         &kp DV_Y   &kp DV_F &kp DV_G           &kp DV_C      &kp DV_R      &kp DV_L      &none
-//    &kp ESC   &hm LALT DV_A &hm LCTL DV_O &hm LSFT DV_E &hm LGUI DV_U    &kp DV_I   &kp DV_D &hm LGUI DV_H      &hm LSFT DV_T &hm LCTL DV_N &hm LALT DV_S &kp DV_MINUS
-//    &none     &kp DV_SEMI   &kp DV_Q      &kp DV_J      &kp DV_K         &kp DV_X   &kp DV_B &kp DV_M           &kp DV_W      &kp DV_V      &kp DV_Z      &none
-//                                          &mo NUMBERS   &lt SYMBOLS BSPC &none      &kp RET  &lt NAVETC SPACE 2 &none
-//                         >;
-//                 };
+                default_layer {
+// -----------------------------------------------------------------------------------------
+// | TAB  |  '  |  ,  |  .  |  p     |  y  |   |  f  |  g   |  c  |  r  |  l  | NO |
+// | ESC  |  a  |  o  |  e  |  u     |  i  |   |  d  |  h   |  t  |  n  |  s  | -  |
+// | NO   |  ;  |  q  |  j  |  k     |  x  |   |  b  |  m   |  w  |  v  |  z  | NO |
+//                    | NUM | BSPC SYM | NO? |   | ENT | RSE  | ALT |
+                        bindings = <
+   &kp TAB   &kp DV_SQT    &kp DV_COMMA  &kp DV_DOT    &kp DV_P         &kp DV_Y   &kp DV_F &kp DV_G           &kp DV_C      &kp DV_R      &kp DV_L      &none
+   &kp ESC   &hm LALT DV_A &hm LCTL DV_O &hm LSFT DV_E &hm LGUI DV_U    &kp DV_I   &kp DV_D &hm LGUI DV_H      &hm LSFT DV_T &hm LCTL DV_N &hm LALT DV_S &kp DV_MINUS
+   &none     &kp DV_SEMI   &kp DV_Q      &kp DV_J      &kp DV_K         &kp DV_X   &kp DV_B &kp DV_M           &kp DV_W      &kp DV_V      &kp DV_Z      &none
+                                         &mo NUMBERS   &lt SYMBOLS BSPC &none      &kp RET  &lt NAVETC SPACE 2 &none
+                        >;
+                };
                 symbol_layer {
 // -----------------------------------------------------------------------------------------
 // | |      |      |       |       |       |   |  {  |  &  |  *  |  (  |  }  | |
