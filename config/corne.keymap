@@ -92,9 +92,9 @@
 //                 | trans | trans | trans |   |  (  |  )  |  _  |
 
                         bindings = <
-   &none &none    &none    &none    &none    &none   &kp DV_LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp DV_RBRC
-   &none &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp DV_QMARK &kp DOLLAR &kp PERCENT &kp CARET &kp DV_PLUS
-   &none &none    &none    &none    &none    &none   &kp TILDE    &kp EXCL   &kp AT      &kp HASH  &kp PIPE
+   &none &none    &none    &none    &none    &none   &kp DV_LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp DV_RBRC &none
+   &none &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp DV_QMARK &kp DOLLAR &kp PERCENT &kp CARET &kp DV_PLUS &none
+   &none &none    &none    &none    &none    &none   &kp TILDE    &kp EXCL   &kp AT      &kp HASH  &kp PIPE    &none
                            &trans   &trans   &trans  &kp LPAR     &kp RPAR   &kp DV_UNDER
 
                         >;
