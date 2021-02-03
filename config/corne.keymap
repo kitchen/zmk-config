@@ -52,18 +52,18 @@
 #define SYMBOLS 1
 #define NUMBERS 2
 #define NAVETC 3
-// / {
-//         behaviors {
-//             hm: homerow_mods {
-//                 compatible = "zmk,behavior-hold-tap";
-//                 label = "HOMEROW_MODS";
-//                 #binding-cells = <2>;
-//                 tapping_term_ms = <150>;
-//                 flavor = "tap-preferred";
-//                 bindings = <&kp>, <&kp>;
-//             };
-//         };
-// };
+/ {
+        behaviors {
+            hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS";
+                #binding-cells = <2>;
+                tapping_term_ms = <150>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+        };
+};
 
 
 / {
