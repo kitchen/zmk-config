@@ -83,7 +83,7 @@
 //                                          &mo NUMBERS   &lt SYMBOLS BSPC &none      &kp RET  &lt NAVETC SPACE 2 &none
 //                         >;
 //                 };
-                symbol_layer {
+                // symbol_layer {
 // -----------------------------------------------------------------------------------------
 // | |      |      |       |       |       |   |  {  |  &  |  *  |  (  |  }  | |
 // | | LALT | LCTL | LSFT  | LGUI  |       |   |  ?  |  $  |  %  |  ^  |  +  | |
