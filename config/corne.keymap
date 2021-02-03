@@ -52,7 +52,6 @@
 #define SYMBOLS 1
 #define NUMBERS 2
 #define NAVETC 3
-
 / {
         behaviors {
             hm: homerow_mods {
@@ -64,7 +63,10 @@
                 bindings = <&kp>, <&kp>;
             };
         };
+};
 
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
@@ -111,18 +113,18 @@
                         >;
                 };
 
-//                 navetc_layer {
-// // -----------------------------------------------------------------------------------------
-// // | LGUI(GRAVE) | BT_SEL 0 | BT_SEL 1 | BT_SEL 2      | BT_SEL 3      | BT_CLR |       | PGUP | HOME | UP   | END   | | |
-// // |             |          |          | LGUI(DV_LBRC) | LGUI(DV_RBRC) |        |       | PGDN | LEFT | DOWN | RIGHT | | |
-// // |             |          |          | LGUI(DV_LBKT) | LGUI(DV_RBKT) |        |       |      | mute | vold | volu  |
-//                         bindings = <
-//    &kp LG(GRAVE) &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR     &kp PG_UP &kp HOME   &kp UP         &kp END      &none &none
-//    &none         &none        &none        &kp LG(DV_LBRC) &kp LG(DV_LBRC) &none          &kp PG_DN &kp LEFT   &kp DOWN       &kp RIGHT    &none &none
-//    &none         &none        &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &none     &kp K_MUTE &kp C_VOL_DN   &kp C_VOL_UP &none &none
-//                                            &trans          &trans          &trans         &trans    &trans     &trans
-//                         >;
+                navetc_layer {
+// -----------------------------------------------------------------------------------------
+// | LGUI(GRAVE) | BT_SEL 0 | BT_SEL 1 | BT_SEL 2      | BT_SEL 3      | BT_CLR |       | PGUP | HOME | UP   | END   | | |
+// |             |          |          | LGUI(DV_LBRC) | LGUI(DV_RBRC) |        |       | PGDN | LEFT | DOWN | RIGHT | | |
+// |             |          |          | LGUI(DV_LBKT) | LGUI(DV_RBKT) |        |       |      | mute | vold | volu  |
+                        bindings = <
+   &kp LG(GRAVE) &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR     &kp PG_UP &kp HOME   &kp UP         &kp END      &none &none
+   &none         &none        &none        &kp LG(DV_LBRC) &kp LG(DV_LBRC) &none          &kp PG_DN &kp LEFT   &kp DOWN       &kp RIGHT    &none &none
+   &none         &none        &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &none     &kp K_MUTE &kp C_VOL_DN   &kp C_VOL_UP &none &none
+                                           &trans          &trans          &trans         &trans    &trans     &trans
+                        >;
 
-//                 };
+                };
         };
 };
