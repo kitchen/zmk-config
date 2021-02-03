@@ -77,9 +77,9 @@
 // | NO   |  ;  |  q  |  j  |  k     |  x  |   |  b  |  m   |  w  |  v  |  z  | NO |
 //                    | NUM | BSPC SYM | NO? |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp DV_SQT    &kp DV_COMMA  &kp DV_DOT    &kp DV_P         &kp DV_Y   &kp DV_F &kp DV_G           &kp DV_C      &kp DV_R      &kp DV_L      &none
-   &kp ESC   &hm LALT DV_A &hm LCTL DV_O &hm LSFT DV_E &hm LGUI DV_U    &kp DV_I   &kp DV_D &hm LGUI DV_H      &hm LSFT DV_T &hm LCTL DV_N &hm LALT DV_S &kp DV_MINUS
-   &none     &kp DV_SEMI   &kp DV_Q      &kp DV_J      &kp DV_K         &kp DV_X   &kp DV_B &kp DV_M           &kp DV_W      &kp DV_V      &kp DV_Z      &none
+   &kp TAB   &kp DV_SQT       &kp DV_COMMA  &kp DV_DOT    &kp DV_P      &kp DV_Y   &kp DV_F &kp DV_G      &kp DV_C      &kp DV_R      &kp DV_L      &none
+   &kp ESC   &kp DV_A         &kp DV_O      &kp DV_E      &kp DV_U      &kp DV_I   &kp DV_D &kp DV_H      &kp DV_T      &kp DV_N      &kp DV_S      &kp DV_MINUS
+   &none     &hm LALT DV_SEMI &hm LCTL DV_Q &hm LSFT DV_J &hm LGUI DV_K &kp DV_X   &kp DV_B &hm LGUI DV_M &hm LSFT DV_W &hm LCTL DV_V &hm LALT DV_Z &none
                                          &mo NUMBERS   &lt SYMBOLS BSPC &none      &kp RET  &lt NAVETC SPACE &none
                         >;
                 };
@@ -120,10 +120,10 @@
 // |             |          |          | LGUI(DV_LBRC) | LGUI(DV_RBRC) |        |       | PGDN | LEFT | DOWN | RIGHT | | |
 // |             |          |          | LGUI(DV_LBKT) | LGUI(DV_RBKT) |        |       |      | mute | vold | volu  |
                         bindings = <
-   &kp LG(GRAVE) &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR     &kp PG_UP &kp HOME   &kp UP         &kp END      &none &none
-   &none         &none        &none        &kp LG(DV_LBRC) &kp LG(DV_RBRC) &none          &kp PG_DN &kp LEFT   &kp DOWN       &kp RIGHT    &none &none
-   &none         &none        &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &none     &kp K_MUTE &kp C_VOL_DN   &kp C_VOL_UP &none &none
-                                           &trans          &trans          &trans         &trans    &trans     &trans
+   &kp LG(GRAVE) &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR     &kp PG_UP     &kp HOME   &kp UP         &kp END      &none &none
+   &none         &none        &none        &kp LG(DV_LBRC) &kp LG(DV_RBRC) &none          &kp PG_DN     &kp LEFT   &kp DOWN       &kp RIGHT    &none &none
+   &none         &none        &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &kp LG(LS(Q)) &kp K_MUTE &kp C_VOL_DN   &kp C_VOL_UP &none &none
+                                           &trans          &trans          &trans         &trans        &trans     &trans
                         >;
 
                 };
