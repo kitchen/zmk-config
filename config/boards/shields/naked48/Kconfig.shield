@@ -1,0 +1,5 @@
+# Copyright (c) 2021 Jeremy Kitchen
+# SPDX-License-Identifier: MIT
+
+config SHIELD_NAKED48
+       def_bool $(shields_list_contains,naked48)

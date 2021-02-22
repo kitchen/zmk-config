@@ -1,0 +1,6 @@
+if SHIELD_NAKED48
+
+config ZMK_KEYBOARD_NAME
+       default "Naked48"
+
+endif
