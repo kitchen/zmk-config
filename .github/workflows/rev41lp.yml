@@ -34,7 +34,7 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (rev41lp)
-        run: west build -s zmk/app -b nice_nano -- -DSHIELD=reviung41 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build -s zmk/app -b nice_nano -- -DSHIELD=reviung41 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config" -DDTC_OVERLAY_FILE="${GITHUB_WORKSPACE}/config/reviung41lp.overlay"
       - name: rev41lp DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano.dts.pre.tmp
