@@ -1,0 +1,76 @@
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        /delete-property/ zephyr,console;
+        /delete-property/ zephyr,shell-uart;
+    };
+
+    xiao_a: connector_a {
+        compatible = "seeeduino-xiao";
+        #gpio-cells = <2>;
+		gpio-map-mask = <0xffffffff 0xffffffc0>;
+		gpio-map-pass-thru = <0 0x3f>;
+        gpio-map
+        = <0 0 &porta 2 0>
+        , <1 0 &porta 4 0>
+        , <2 0 &porta 10 0>
+        , <3 0 &porta 11 0>
+        , <4 0 &porta 8 0>
+        , <5 0 &porta 9 0>
+        , <6 0 &portb 8 0>
+        , <7 0 &portb 9 0>
+        , <8 0 &porta 7 0>
+        , <9 0 &porta 5 0>
+        , <10 0 &porta 6 0>
+        ;
+    };
+
+    xiao_d: connector_d {
+        compatible = "seeeduino-xiao";
+        #gpio-cells = <2>;
+		gpio-map-mask = <0xffffffff 0xffffffc0>;
+		gpio-map-pass-thru = <0 0x3f>;
+        gpio-map
+        = <0 0 &porta 2 0>
+        , <1 0 &porta 4 0>
+        , <2 0 &porta 10 0>
+        , <3 0 &porta 11 0>
+        , <4 0 &porta 8 0>
+        , <5 0 &porta 9 0>
+        , <6 0 &portb 8 0>
+        , <7 0 &portb 9 0>
+        , <8 0 &porta 7 0>
+        , <9 0 &porta 5 0>
+        , <10 0 &porta 6 0>
+        ;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-direct";
+        label = "KSCAN";
+
+        input-gpios
+        = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&xiao_d 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&xiao_d 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&xiao_d 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&xiao_d 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&xiao_d 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&xiao_d 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        ;
+        
+        /* long term I'd like to be able to have these as &xiao_gpio_d, etc, a la pro micro */
+        /* = <&xiao_gpio_d 0 (GPIO_ACTIVE_LOW) | GPIO_PULL_UP)>, */
+        /* = <&xiao_gpio_d 1 (GPIO_ACTIVE_LOW) | GPIO_PULL_UP)>, */
+        /* = <&xiao_gpio_d 2 (GPIO_ACTIVE_LOW) | GPIO_PULL_UP)>, */
+        /* = <&xiao_gpio_d 3 (GPIO_ACTIVE_LOW) | GPIO_PULL_UP)>, */
+        /* = <&xiao_gpio_d 7 (GPIO_ACTIVE_LOW) | GPIO_PULL_UP)>, */
+        /* = <&xiao_gpio_d 8 (GPIO_ACTIVE_LOW) | GPIO_PULL_UP)>, */
+        /* = <&xiao_gpio_d 9 (GPIO_ACTIVE_LOW) | GPIO_PULL_UP)>, */
+        /* = <&xiao_gpio_d 10 (GPIO_ACTIVE_LOW) | GPIO_PULL_UP)>, */
+    };
+};
+
+&sercom0 { status = "disabled"; };
+&sercom4 { status = "disabled"; };

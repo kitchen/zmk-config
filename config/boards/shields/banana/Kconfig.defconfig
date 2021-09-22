@@ -1,0 +1,9 @@
+if SHIELD_BANANA
+
+config ZMK_KEYBOARD_NAME
+    default "banana macropad"
+
+config ZMK_USB
+    default y
+
+endif
