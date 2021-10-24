@@ -23,4 +23,4 @@ include:
       shield: corne_right
     - board: nice_nano
       shield: reviung41
-      cmake-args: '-DDTC_OVERLAY_FILE="${GITHUB_WORKSPACE}/config/reviung41lp.overlay:${GITHUB_WORKSPACE}/config/reviung41.keymap$'
+      cmake-args: '-DDTC_OVERLAY_FILE="${GITHUB_WORKSPACE}/config/reviung41lp.overlay:${GITHUB_WORKSPACE}/config/reviung41.keymap"'
