@@ -41,3 +41,4 @@ include:
     # - board: corne-ish_zen_left
     # - board: corne-ish_zen_right
     - board: ahokore
+    - board: zaphod
