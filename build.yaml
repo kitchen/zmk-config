@@ -40,3 +40,4 @@ include:
       artifact-name: reviung41chocv2
     # - board: corne-ish_zen_left
     # - board: corne-ish_zen_right
+    - board: ahokore

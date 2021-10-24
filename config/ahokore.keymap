@@ -1,0 +1,156 @@
+#define DV_H J
+#define DV_I G
+#define DV_J C
+#define DV_K V
+#define DV_L P
+#define DV_M M
+#define DV_N L
+#define DV_O S
+#define DV_P R
+#define DV_Q X
+#define DV_R O
+#define DV_S SEMI
+#define DV_T K
+#define DV_U F
+#define DV_V DOT
+#define DV_W COMMA
+#define DV_X B
+#define DV_Y T
+#define DV_Z FSLH
+#define DV_SEMI Z
+#define DV_SQT Q
+#define DV_COMMA W
+#define DV_DOT E
+#define DV_FSLH LBKT
+#define DV_QMARK LBRC
+#define DV_MINUS SQT
+#define DV_UNDER DQT
+#define DV_EQUAL RBKT
+#define DV_PLUS RBRC
+#define DV_LBKT MINUS
+#define DV_RBKT EQUAL
+#define DV_LBRC UNDER
+#define DV_RBRC PLUS
+
+#define SYMBOLS 1
+#define NUMBERS 2
+#define NAVETC 3
+/ {
+        behaviors {
+            hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS";
+                #binding-cells = <2>;
+                tapping_term_ms = <150>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+        };
+};
+
+/ {
+        combos {
+               compatible = "zmk,combos";
+               combo_enter {
+                           timeout-ms = <50>;
+                           key-positions = <7 8 9>;
+                           bindings = <&kp ENTER>;
+               };
+               combo_lpar {
+                           timeout-ms = <50>;
+                           key-positions = <3 4>; 
+                           bindings = <&kp LPAR>;
+               };
+               combo_rpar {
+                           timeout-ms = <50>;
+                           key-positions = <7 8>;
+                           bindings = <&kp RPAR>;
+               };
+               combo_lbkt {
+                           timeout-ms = <50>;
+                           key-positions = <2 3>;
+                           bindings = <&kp DV_LBKT>;
+               };
+               combo_rbkt {
+                           timeout-ms = <50>;
+                           key-positions = <8 9>;
+                           bindings = <&kp DV_RBKT>;
+               };
+               combo_lbrc {
+                           timeout-ms = <50>;
+                           key-positions = <1 2>;
+                           bindings = <&kp DV_LBRC>;
+               };
+               combo_rbrc {
+                           timeout-ms = <50>;
+                           key-positions = <9 10>;
+                           bindings = <&kp DV_RBRC>;
+               };
+        };
+};
+
+/ {
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
+// -----------------------------------------------------------------------------
+// |  '  |  ,  |  .  |  p     |  y  |   |  f  |  g   |  c  |  r  |  l  |
+// |  a  |  o  |  e  |  u     |  i  |   |  d  |  h   |  t  |  n  |  s  |
+// |  ;  |  q  |  j  |  k     |  x  |   |  b  |  m   |  w  |  v  |  z  |
+//                    | NUM | BSPC SYM |  ENT | RSE  | ALT |
+                        bindings = <
+   &kp DV_SQT       &kp DV_COMMA  &kp DV_DOT    &kp DV_P      &kp DV_Y   &kp DV_F &kp DV_G      &kp DV_C      &kp DV_R      &kp DV_L
+   &kp DV_A         &kp DV_O      &kp DV_E      &kp DV_U      &kp DV_I   &kp DV_D &kp DV_H      &kp DV_T      &kp DV_N      &kp DV_S
+   &hm LALT DV_SEMI &hm LCTL DV_Q &hm LSFT DV_J &hm LGUI DV_K &kp DV_X   &kp DV_B &hm LGUI DV_M &hm LSFT DV_W &hm LCTL DV_V &hm LALT DV_Z
+                                                &none &lt NUMBERS BSPC &lt SYMBOLS TAB &lt NAVETC ESC &kp SPACE &none
+                        >;
+                };
+
+                symbol_layer {
+// -----------------------------------------------------------------------------------------
+// | |      |      |       |       |       |   |  {  |  &  |  *  |  (  |  }  | |
+// | | LALT | LCTL | LSFT  | LGUI  |       |   |  ?  |  $  |  %  |  ^  |  +  | |
+// | |      |      |       |       |       |   |  ~  |  !  |  @  |  #  |  |  | |
+//                 | trans | trans | trans |   |  (  |  )  |  _  |
+
+                        bindings = <
+   &none    &none    &none    &none    &none   &kp DV_LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp DV_RBRC
+   &none    &none    &none    &none    &none   &kp DV_QMARK &kp DOLLAR &kp PERCENT &kp CARET &kp DV_PLUS
+   &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp TILDE    &kp EXCL   &kp AT      &kp HASH  &kp PIPE
+                                    // FIXME: I can't type LPAR on this layout
+                           &none &trans   &trans     &kp RPAR   &kp DV_UNDER &none
+
+                        >;
+                };
+
+                number_layer {
+// -----------------------------------------------------------------------------------------
+// | |      |      |       |       |       |   |  [  |  7  |  8  |  9  |  ]  | |
+// | | LALT | LCTL | LSFT  | LGUI  |       |   |  /  |  4  |  5  |  6  |  =  | |
+// | |      |      |       |       |       |   |  `  |  1  |  2  |  3  |  \  | |
+//                 | trans | trans | trans |   |  .  |  0  |  -  |
+                        bindings = <
+   &none    &none    &none    &none    &none   &kp DV_LBKT &kp N7 &kp N8       &kp N9 &kp DV_RBKT
+   &none    &none    &none    &none    &none   &kp DV_FSLH &kp N4 &kp N5       &kp N6 &kp DV_EQUAL
+   &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp GRAVE   &kp N1 &kp N2       &kp N3 &kp BSLH
+                                    // FIXME: I can't type DV_DOT on this layout
+                           &none &trans   &trans  &kp N0 &kp DV_MINUS &none
+                        >;
+                };
+
+                navetc_layer {
+// -----------------------------------------------------------------------------------------
+// | LGUI(GRAVE) | BT_SEL 0 | BT_SEL 1 | BT_SEL 2      | BT_SEL 3      | BT_CLR |       | PGUP | HOME | UP   | END   | | |
+// |             |          |          | LGUI(DV_LBRC) | LGUI(DV_RBRC) |        |       | PGDN | LEFT | DOWN | RIGHT | | |
+// |             |          |          | LGUI(DV_LBKT) | LGUI(DV_RBKT) |        |       |      | mute | vold | volu  |
+                        bindings = <
+   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &none          &kp PG_UP     &kp HOME   &kp UP         &kp END      &none
+   &bt BT_CLR   &none        &kp LG(DV_LBRC) &kp LG(DV_RBRC) &none          &kp PG_DN     &kp LEFT   &kp DOWN       &kp RIGHT    &none
+   &out OUT_BLE &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &kp LG(LC(DV_Q)) &kp K_MUTE &kp C_VOL_DN   &kp C_VOL_UP &none
+                                           &none &trans         &trans        &trans     &trans &none
+                        >;
+
+                };
+        };
+};
