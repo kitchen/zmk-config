@@ -42,3 +42,5 @@ include:
     # - board: corne-ish_zen_right
     - board: ahokore
     - board: zaphod
+    - board: seeeduino_xiao
+      shield: banana
