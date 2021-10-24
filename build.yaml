@@ -38,5 +38,5 @@ include:
     - board: nice_nano_v2
       shield: reviung41
       artifact-name: reviung41chocv2
-    - board: corne-ish_zen_left
-    - board: corne-ish_zen_right
+    # - board: corne-ish_zen_left
+    # - board: corne-ish_zen_right
