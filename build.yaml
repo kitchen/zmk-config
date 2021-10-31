@@ -41,3 +41,5 @@ include:
     - board: zaphod
     - board: seeeduino_xiao
       shield: banana
+    - board: nice_nano_v2
+      shield: reviung34
