@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: zephyr-main-rp2040-playground
+      revision: core/zephyr-main-rp2040-playground
       import: app/west.yml
   self:
     path: config
