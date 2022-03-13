@@ -71,37 +71,37 @@
                compatible = "zmk,combos";
                combo_enter {
                            timeout-ms = <50>;
-                           key-positions = <6 7 8>;
+                           key-positions = <5 6 7>;
                            bindings = <&kp ENTER>;
                };
                combo_lpar {
                            timeout-ms = <50>;
-                           key-positions = <2 3>;
+                           key-positions = <1 2>;
                            bindings = <&kp LPAR>;
                };
                combo_rpar {
                            timeout-ms = <50>;
-                           key-positions = <6 7>;
+                           key-positions = <5 6>;
                            bindings = <&kp RPAR>;
                };
                combo_lbkt {
                            timeout-ms = <50>;
-                           key-positions = <1 2>;
+                           key-positions = <0 1>;
                            bindings = <&kp DV_LBKT>;
                };
                combo_rbkt {
                            timeout-ms = <50>;
-                           key-positions = <7 8>;
+                           key-positions = <6 7>;
                            bindings = <&kp DV_RBKT>;
                };
                combo_lbrc {
                            timeout-ms = <50>;
-                           key-positions = <0 1>;
+                           key-positions = <0 9>;
                            bindings = <&kp DV_LBRC>;
                };
                combo_rbrc {
                            timeout-ms = <50>;
-                           key-positions = <8 9>;
+                           key-positions = <7 18>;
                            bindings = <&kp DV_RBRC>;
                };
         };
