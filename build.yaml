@@ -43,3 +43,5 @@ include:
       shield: banana
     - board: nice_nano_v2
       shield: reviung34
+    - board: nice_nano_v2
+      shield: osprette
