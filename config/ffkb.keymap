@@ -121,7 +121,7 @@
    &none &kp DV_SQT       &kp DV_COMMA  &kp DV_DOT    &kp DV_P      &kp DV_Y   &kp DV_F &kp DV_G      &kp DV_C      &kp DV_R      &kp DV_L &none
    &none &kp DV_A         &kp DV_O      &kp DV_E      &kp DV_U      &kp DV_I   &none &kp DV_D &kp DV_H      &kp DV_T      &kp DV_N      &kp DV_S &none
    &none &hm LALT DV_SEMI &hm LCTL DV_Q &hm LSFT DV_J &hm LGUI DV_K &kp DV_X   &kp DV_B &hm LGUI DV_M &hm LSFT DV_W &hm LCTL DV_V &hm LALT DV_Z &none
-                                                &none &lt NUMBERS BSPC &lt SYMBOLS TAB &lt NAVETC ESC &kp SPACE &none
+                                                &none &none &lt NUMBERS BSPC &lt SYMBOLS TAB &lt NAVETC ESC &kp SPACE &none &none
                         >;
                 };
 
@@ -137,7 +137,7 @@
    &none &none    &none    &none    &none    &none   &none &kp DV_QMARK &kp DOLLAR &kp PERCENT &kp CARET &kp DV_PLUS &none
    &none &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp TILDE    &kp EXCL   &kp AT      &kp HASH  &kp PIPE &none
                                     // FIXME: I can't type LPAR on this layout
-                           &none &trans   &trans     &kp RPAR   &kp DV_UNDER &none
+                           &none &none &trans   &trans     &kp RPAR   &kp DV_UNDER &none &none
 
                         >;
                 };
@@ -153,7 +153,7 @@
    &none &none    &none    &none    &none    &none   &none &kp DV_FSLH &kp N4 &kp N5       &kp N6 &kp DV_EQUAL &none
    &none &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp GRAVE   &kp N1 &kp N2       &kp N3 &kp BSLH &none
                                     // FIXME: I can't type DV_DOT on this layout
-                           &none &trans   &trans  &kp N0 &kp DV_MINUS &none
+                           &none &none &trans   &trans  &kp N0 &kp DV_MINUS &none &none
                         >;
                 };
 
@@ -166,7 +166,7 @@
    &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &none          &kp PG_UP     &kp HOME   &kp UP         &kp END      &none &none
    &none &bt BT_CLR   &none        &kp LG(DV_LBRC) &kp LG(DV_RBRC) &none          &none &kp PG_DN     &kp LEFT   &kp DOWN       &kp RIGHT    &none &none
    &none &out OUT_BLE &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &kp LG(LC(DV_Q)) &kp K_MUTE &kp C_VOL_DN   &kp C_VOL_UP &none &none
-                                           &none &trans         &trans        &trans     &trans &none
+                                           &none &none &trans         &trans        &trans     &trans &none &none
                         >;
 
                 };
