@@ -118,7 +118,8 @@
 // |  ;  |  q  |  j  |  k     |  x  |   |  b  |  m   |  w  |  v  |  z  |
 //                    | NUM | BSPC SYM |  ENT | RSE  | ALT |
                         bindings = <
-   &none &kp DV_SQT       &kp DV_COMMA  &kp DV_DOT    &kp DV_P      &kp DV_Y   &kp DV_F &kp DV_G      &kp DV_C      &kp DV_R      &kp DV_L &none
+   &none &kp DV_A &kp DV_A  &kp DV_A    &kp DV_A      &kp DV_A   &kp DV_A &kp DV_A      &kp DV_A      &kp DV_A      &kp DV_A &none
+   // &none &kp DV_SQT       &kp DV_COMMA  &kp DV_DOT    &kp DV_P      &kp DV_Y   &kp DV_F &kp DV_G      &kp DV_C      &kp DV_R      &kp DV_L &none
    &none &kp DV_A         &kp DV_O      &kp DV_E      &kp DV_U      &kp DV_I   &kp DV_D &kp DV_H      &kp DV_T      &kp DV_N      &kp DV_S &none
    &none &hm LALT DV_SEMI &hm LCTL DV_Q &hm LSFT DV_J &hm LGUI DV_K &kp DV_X   &kp DV_B &hm LGUI DV_M &hm LSFT DV_W &hm LCTL DV_V &hm LALT DV_Z &none
                                                 &none &lt NUMBERS BSPC &lt SYMBOLS TAB &lt NAVETC ESC &kp SPACE &none
