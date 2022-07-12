@@ -8,7 +8,7 @@
         zmk,matrix_transform = &ffkb_transform;
     };
 
-    ffkb_transform {
+    ffkb_transform: ffkb_transform {
         compatible = "zmk,matrix-transform";
         columns = <8>;
         rows = <6>;
