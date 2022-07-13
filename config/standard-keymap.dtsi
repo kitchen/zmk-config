@@ -72,6 +72,9 @@
    &kp DV_A         &kp DV_O      &kp DV_E      &kp DV_U      &kp DV_I   &kp DV_D &kp DV_H      &kp DV_T      &kp DV_N      &kp DV_S
    &hm LALT DV_SEMI &hm LCTL DV_Q &hm LSFT DV_J &hm LGUI DV_K &kp DV_X   &kp DV_B &hm LGUI DV_M &hm LSFT DV_W &hm LCTL DV_V &hm LALT DV_Z
                                                 &lt NUMBERS BSPC &lt SYMBOLS TAB &lt NAVETC ESC &kp SPACE
+
+   &kp LG(LC(DV_Q)) // lock the computer
+   &kp ENTER // for like a center key like the reviung41
                         >;
                 };
 
