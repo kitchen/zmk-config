@@ -47,3 +47,7 @@ include:
       shield: osprette
     - board: nice_nano_v2
       shield: ffkb
+    # - board: seeeduino_xiao
+    #   shield: pdxkbc_macropad_xiao
+    - board: nice_nano_v2
+      shield: pdxkbc_macropad_promicro

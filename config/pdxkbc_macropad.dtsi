@@ -1,0 +1,17 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include "dvorak-defines.h"
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        
+        default_layer {
+            bindings = <
+                &kp DV_P &kp DV_K
+                &kp DV_D &kp DV_B
+                &kp DV_X &kp DV_C
+            >;
+        };
+    };
+};

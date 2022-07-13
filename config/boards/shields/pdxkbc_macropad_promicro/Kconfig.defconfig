@@ -1,0 +1,6 @@
+if SHIELD_PDXKBC_MACROPAD
+
+config ZMK_KEYBOARD_NAME
+    default "PDXKBC Macropad"
+    
+endif

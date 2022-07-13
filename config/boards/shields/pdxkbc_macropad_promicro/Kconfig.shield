@@ -1,0 +1,2 @@
+config SHIELD_PDXKBC_MACROPAD
+    def_bool $(shields_list_contains,pdxkbc_macropad)
