@@ -3,6 +3,10 @@
  */
 #include "standard-keymap.dtsi"
 
-&kscan {
+&kscan_left {
+    debounce-period = <10>;
+};
+
+&kscan_right {
     debounce-period = <10>;
 };
