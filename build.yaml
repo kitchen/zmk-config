@@ -39,8 +39,8 @@ include:
       shield: reviung41
     - board: ahokore
     - board: zaphod
-    # - board: seeeduino_xiao
-    #   shield: banana
+    - board: seeeduino_xiao
+      shield: banana
     - board: nice_nano_v2
       shield: reviung34
     - board: nice_nano_v2
