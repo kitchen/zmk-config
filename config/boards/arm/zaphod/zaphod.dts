@@ -16,8 +16,11 @@
 		zephyr,code-partition = &code_partition;
 		zephyr,sram = &sram0;
 		zephyr,flash = &flash0;
+		zephyr,display = &ls0xx;
 		zmk,kscan = &kscan;
 		zmk,matrix_transform = &transform;
+		zmk,battery = &vbatt;
+		zephyr,console = &cdc_acm_uart;
 	};
 
 	leds {
@@ -28,7 +31,7 @@
 		};
 	};
 
-	vbatt {
+	vbatt: vbatt {
 		compatible = "zmk,battery-voltage-divider";
 		label = "BATTERY";
 		io-channels = <&adc 7>;
@@ -52,6 +55,8 @@
 	kscan: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
 		label = "KSCAN";
+		debounce-press-ms = <1>;
+		debounce-release-ms = <5>;
 
 		diode-direction = "col2row";
 
@@ -61,11 +66,11 @@
 			, <&gpio0 9 (GPIO_ACTIVE_HIGH)>
 			, <&gpio0 10 (GPIO_ACTIVE_HIGH)>
 			, <&gpio0 22 (GPIO_ACTIVE_HIGH)>
-			, <&gpio0 30 (GPIO_ACTIVE_HIGH)>
-			, <&gpio0 28 (GPIO_ACTIVE_HIGH)>
-			, <&gpio0 29 (GPIO_ACTIVE_HIGH)>
 			, <&gpio0 2 (GPIO_ACTIVE_HIGH)>
+			, <&gpio0 28 (GPIO_ACTIVE_HIGH)>
 			, <&gpio1 15 (GPIO_ACTIVE_HIGH)>
+			, <&gpio0 30 (GPIO_ACTIVE_HIGH)>
+			, <&gpio0 29 (GPIO_ACTIVE_HIGH)>
 			;
 		row-gpios
 			= <&gpio1 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -100,7 +105,7 @@
 	miso-pin = <8>;
 	cs-gpios = <&gpio0 4 GPIO_ACTIVE_HIGH>;
 
-	ls0xx@0 {
+	ls0xx: ls0xx@0 {
 		compatible = "sharp,ls0xx";
 		label = "DISPLAY";
 		spi-max-frequency = <2000000>;
@@ -113,6 +118,11 @@
 
 &usbd {
 	status = "okay";
+	compatible = "nordic,nrf-usbd";
+	cdc_acm_uart: cdc_acm_uart {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "CDC_ACM_0";
+	};
 };
 
 
