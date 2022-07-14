@@ -4,9 +4,11 @@
 #include "standard-keymap.dtsi"
 
 &kscan_left {
-    debounce-period = <10>;
+    debounce-press-ms = <10>;
+    debounce-release-ms = <10>;
 };
 
 &kscan_right {
-    debounce-period = <10>;
+    debounce-press-ms = <10>;
+    debounce-release-ms = <10>;
 };
