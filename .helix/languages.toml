@@ -1,0 +1,8 @@
+
+[[language]]
+name = "devicetree"
+scope = "source.devicetree"
+injection-regex = "(dtsi?|devicetree|fdt)"
+file-types = ["dts", "dtsi", "keymap", "overlay"]
+comment-token = "//"
+indent = { tab-width = 4, unit = "\t" }
