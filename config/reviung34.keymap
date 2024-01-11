@@ -10,7 +10,7 @@
 		};
 	};
 
-	spi_sleep: spi0_sleep {
+	spi0_sleep: spi0_sleep {
 		group1 {
 			psels = <NRF_PSEL(SPIM_SCK, 1, 2)>,
 				<NRF_PSEL(SPIM_MOSI, 1, 7)>,
