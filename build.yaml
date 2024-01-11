@@ -44,7 +44,7 @@ include:
     - board: nice_nano_v2
       shield: reviung34
     - board: nice_nano_v2
-      shield: reviung34
+      shield: reviung34 nice_view
       artifact-name: reviung34_nice_view
     - board: nice_nano_v2
       shield: osprette
