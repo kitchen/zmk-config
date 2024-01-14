@@ -1,9 +1,1 @@
 #include "standard-keymap.dtsi"
-
-// nice_view_spi: &spi0 {
-//     compatible = "nordic,nrf-spim";
-//     mosi-pin = <39>;
-//     sck-pin = <34>;
-//     miso-pin = <2>;
-//     cs-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;
-// };  
