@@ -29,6 +29,11 @@
                            key-positions = <6 7 8>;
                            bindings = <&kp ENTER>;
                };
+               combo_lock {
+                           timeout-ms = <50>;
+                           key-positions = <1 2 3>;
+                           bindings = <&kp LG(LC(DV_Q))>;
+               };
                combo_lpar {
                            timeout-ms = <50>;
                            key-positions = <2 3>;
