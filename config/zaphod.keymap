@@ -1,7 +1,7 @@
 /* the zaphod is what got me down to my "standard keymap" so no need for
  * a matrix transform or any other funny business here!
  */
-#include "standard-keymap.dtsi"
+#include "standard-keymap.keymap"
 
 &kscan {
     debounce-period = <10>;

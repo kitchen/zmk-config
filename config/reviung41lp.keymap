@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "standard-keymap.dtsi"
+#include "standard-keymap.keymap"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {

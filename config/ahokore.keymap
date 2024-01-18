@@ -1,5 +1,5 @@
 /* ahokore is a 3x5 but it has 3 thumb keys, get rid of the extras */
-#include "standard-keymap.dtsi"
+#include "standard-keymap.keymap"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {

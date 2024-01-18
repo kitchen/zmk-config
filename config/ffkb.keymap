@@ -1,6 +1,6 @@
 /* the ffkb has 12 columns, 3 encoders, and 3 thumbs. Delete the extra bits */
 
-#include "standard-keymap.dtsi"
+#include "standard-keymap.keymap"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
