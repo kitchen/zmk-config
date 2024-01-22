@@ -15,5 +15,9 @@ manifest:
       remote: kitchen
       clone-depth: 1
       revision: kitchen/zmk-shield
+    - name: reviung34
+      remote: reviung34-zmk
+      clone-depth: 1
+      revision: main
   self:
     path: config

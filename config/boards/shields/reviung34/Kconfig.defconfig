@@ -1,9 +1,0 @@
-if SHIELD_REVIUNG34
-
-config ZMK_KEYBOARD_NAME
-    default "reviung34"
-
-config ZMK_USB
-    default y
-
-endif
