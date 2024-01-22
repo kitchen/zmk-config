@@ -8,6 +8,7 @@
 #define SYMBOLS 1
 #define NUMBERS 2
 #define NAVETC 3
+#define ACCENTS 4
 / {
         behaviors {
             hm: homerow_mods {
@@ -19,6 +20,21 @@
                 bindings = <&kp>, <&kp>;
             };
         };
+};
+
+/ {
+	macros {
+		option_e: option_e {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <1>;
+			bindings = <&kp LA(DV_E)>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+		};
+		option_n: option_n {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <1>;
+			bindings = <&kp LA(DV_N)>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+		};
+	};
 };
 
 / {
@@ -34,6 +50,18 @@
                            key-positions = <1 2 3>;
                            bindings = <&kp LG(LC(DV_Q))>;
                };
+			   combo_accents_deadkey_left {
+			               timeout-ms = <50>;
+						   key-positions = <22 23>;
+						   bindings = <&sl ACCENTS>;
+				
+			   };
+			   combo_accents_deadkey_right {
+			               timeout-ms = <50>;
+						   key-positions = <26 27>;
+						   bindings = <&sl ACCENTS>;
+				
+			   };
                combo_lpar {
                            timeout-ms = <50>;
                            key-positions = <2 3>;
@@ -113,6 +141,16 @@
                         >;
 
                 };
+
+				accents_layer {
+						 bindings = <
+   &none    &none    &none    &none    &none   &none &none &none &none &none
+   &option_e DV_A    &option_e DV_O    &option_e DV_E    &option_e DV_U    &option_e DV_I     &none &none &none &option_n DV_N &none
+   &none    &none    &none    &none    &none   &none &none &none &none &none
+                           &trans   &trans  &kp N0 &kp DV_MINUS
+					;
+					
+				};
         };
 };
 
