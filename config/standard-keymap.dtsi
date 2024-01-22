@@ -146,8 +146,8 @@
 						 bindings = <
    &none    &none    &none    &none    &none   &none &none &none &none &none
    &option_e DV_A    &option_e DV_O    &option_e DV_E    &option_e DV_U    &option_e DV_I     &none &none &none &option_n DV_N &none
-   &none    &none    &none    &none    &none   &none &none &none &none &none
-                           &trans   &trans  &kp N0 &kp DV_MINUS
+   &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
+                           &trans   &trans  &trans &trans
 					>;
 					
 				};
