@@ -25,12 +25,12 @@
 / {
 	macros {
 		option_e: option_e {
-			compatible = "zmk,behavior-macro";
+			compatible = "zmk,behavior-macro-one-param";
 			#binding-cells = <1>;
 			bindings = <&kp LA(DV_E)>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 		};
 		option_n: option_n {
-			compatible = "zmk,behavior-macro";
+			compatible = "zmk,behavior-macro-one-param";
 			#binding-cells = <1>;
 			bindings = <&kp LA(DV_N)>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 		};
