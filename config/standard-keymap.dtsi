@@ -39,12 +39,12 @@
 		shift_option_e: shift_option_e {
 			compatible = "zmk,behavior-macro-one-param";
 			#binding-cells = <1>;
-			bindings = <&kp LS(LA(DV_E))>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+			bindings = <&kp LA(DV_E)>, <&macro_param_1to1 &kp LS(MACRO_PLACEHOLDER)>;
 		};
 		shift_option_n: shift_option_n {
 			compatible = "zmk,behavior-macro-one-param";
 			#binding-cells = <1>;
-			bindings = <&kp LS(LA(DV_N))>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+			bindings = <&kp LA(DV_N)>, <&macro_param_1to1 &kp LS(MACRO_PLACEHOLDER)>;
 		};
 	};
 };
