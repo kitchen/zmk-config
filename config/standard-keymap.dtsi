@@ -26,7 +26,7 @@
 
 / {
 	macros {
-		option_deadkey: option_deadkey {
+		deadkey_x_y: deadkey_x_y {
 			compatible = "zmk,behavior-macro-two-param";
 			#binding-cells = <2>;
 			bindings = <&macro_param_1to1 &kp LA(MACRO_PLACEHOLDER)>, <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
@@ -120,7 +120,7 @@
 				accents_layer {
 						 bindings = <
    &none    &none    &none    &none    &none   &none &none &none &none &none
-   &option_deadkey DV_E DV_A    &option_deadkey DV_E DV_O    &option_deadkey DV_E DV_E    &option_deadkey DV_E DV_U    &option_deadkey DV_E DV_I     &none &none &none &option_deadkey DV_N DV_N &none
+   &deadkey_x_y LA(DV_E) DV_A    &deadkey_x_y LA(DV_E) DV_O    &deadkey_x_y LA(DV_E) DV_E    &deadkey_x_y LA(DV_E) DV_U    &deadkey_x_y LA(DV_E) DV_I     &none &none &none &deadkey_x_y LA(DV_N) DV_N &none
    &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
                            &trans   &trans  &trans &trans
 					>;
@@ -129,7 +129,7 @@
 				shifted_accents_layer {
 						 bindings = <
    &none    &none    &none    &none    &none   &none &none &none &none &none
-   &option_deadkey DV_E LS(DV_A)    &option_deadkey DV_E LS(DV_O)    &option_deadkey DV_E LS(DV_E)    &option_deadkey DV_E LS(DV_U)    &option_deadkey DV_E LS(DV_I)     &none &none &none &option_deadkey DV_N LS(DV_N) &none
+   &deadkey_x_y LA(DV_E) LS(DV_A)    &deadkey_x_y LA(DV_E) LS(DV_O)    &deadkey_x_y LA(DV_E) LS(DV_E)    &deadkey_x_y LA(DV_E) LS(DV_U)    &deadkey_x_y LA(DV_E) LS(DV_I)     &none &none &none &deadkey_x_y LA(DV_N) LS(DV_N) &none
    &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
                            &trans   &trans  &trans &trans
 					>;
