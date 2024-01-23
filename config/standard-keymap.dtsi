@@ -5,10 +5,11 @@
 
 #include "dvorak-defines.h"
 
-#define SYMBOLS 1
-#define NUMBERS 2
-#define NAVETC 3
-#define ACCENTS 4
+#define ACCENTS 1
+#define SYMBOLS 2
+#define NUMBERS 3
+#define NAVETC 4
+
 / {
         behaviors {
             hm: homerow_mods {
@@ -111,6 +112,16 @@
                         >;
                 };
 
+				accents_layer {
+						 bindings = <
+   &none    &none    &none    &none    &none   &none &none &none &none &none
+   &option_e DV_A    &option_e DV_O    &option_e DV_E    &option_e DV_U    &option_e DV_I     &none &none &none &option_n DV_N &none
+   &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
+                           &trans   &trans  &trans &trans
+					>;
+					
+				};
+
                 symbol_layer {
                         bindings = <
    &none    &none    &none    &none    &none   &kp DV_LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp DV_RBRC
@@ -142,15 +153,6 @@
 
                 };
 
-				accents_layer {
-						 bindings = <
-   &none    &none    &none    &none    &none   &none &none &none &none &none
-   &option_e DV_A    &option_e DV_O    &option_e DV_E    &option_e DV_U    &option_e DV_I     &none &none &none &option_n DV_N &none
-   &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
-                           &trans   &trans  &trans &trans
-					>;
-					
-				};
         };
 };
 
