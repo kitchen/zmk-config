@@ -6,9 +6,10 @@
 #include "dvorak-defines.h"
 
 #define ACCENTS 1
-#define SYMBOLS 2
-#define NUMBERS 3
-#define NAVETC 4
+#define SHIFTED_ACCENTS 2
+#define SYMBOLS 3
+#define NUMBERS 4
+#define NAVETC 5
 
 / {
         behaviors {
@@ -35,6 +36,16 @@
 			#binding-cells = <1>;
 			bindings = <&kp LA(DV_N)>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 		};
+		shift_option_e: shift_option_e {
+			compatible = "zmk,behavior-macro-one-param";
+			#binding-cells = <1>;
+			bindings = <&kp LS(LA(DV_E))>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+		};
+		shift_option_n: shift_option_n {
+			compatible = "zmk,behavior-macro-one-param";
+			#binding-cells = <1>;
+			bindings = <&kp LS_LA(DV_N))>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+		};
 	};
 };
 
@@ -55,12 +66,21 @@
 			               timeout-ms = <50>;
 						   key-positions = <22 23>;
 						   bindings = <&sl ACCENTS>;
-				
 			   };
 			   combo_accents_deadkey_right {
 			               timeout-ms = <50>;
 						   key-positions = <26 27>;
 						   bindings = <&sl ACCENTS>;
+			   };
+			   combo_shifted_accents_deadkey_left {
+			               timeout-ms = <50>;
+						   key-positions = <21 22 23>;
+						   bindings = <&sl SHIFTED_ACCENTS>;
+			   };
+			   combo_shifted_accents_deadkey_right {
+			               timeout-ms = <50>;
+						   key-positions = <26 27 28>;
+						   bindings = <&sl SHIFTED_ACCENTS>;
 				
 			   };
                combo_lpar {
@@ -119,7 +139,15 @@
    &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
                            &trans   &trans  &trans &trans
 					>;
-					
+				};
+
+				shifted_accents_layer {
+						 bindings = <
+   &none    &none    &none    &none    &none   &none &none &none &none &none
+   &shift_option_e DV_A    &shift_option_e DV_O    &shift_option_e DV_E    &shift_option_e DV_U    &shift_option_e DV_I     &none &none &none &shift_option_n DV_N &none
+   &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
+                           &trans   &trans  &trans &trans
+					>;
 				};
 
                 symbol_layer {
