@@ -26,25 +26,10 @@
 
 / {
 	macros {
-		option_e: option_e {
-			compatible = "zmk,behavior-macro-one-param";
-			#binding-cells = <1>;
-			bindings = <&kp LA(DV_E)>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-		};
-		option_n: option_n {
-			compatible = "zmk,behavior-macro-one-param";
-			#binding-cells = <1>;
-			bindings = <&kp LA(DV_N)>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-		};
-		shift_option_e: shift_option_e {
-			compatible = "zmk,behavior-macro-one-param";
-			#binding-cells = <1>;
-			bindings = <&kp LA(DV_E)>, <&macro_param_1to1 &kp LS(MACRO_PLACEHOLDER)>;
-		};
-		shift_option_n: shift_option_n {
-			compatible = "zmk,behavior-macro-one-param";
-			#binding-cells = <1>;
-			bindings = <&kp LA(DV_N)>, <&macro_param_1to1 &kp LS(MACRO_PLACEHOLDER)>;
+		option_deadkey: option_deadkey {
+			compatible = "zmk,behavior-macro-two-param";
+			#binding-cells = <2>;
+			bindings = <&macro_param_1to1 &kp LA(MACRO_PLACEHOLDER)>, <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
 		};
 	};
 };
@@ -135,7 +120,7 @@
 				accents_layer {
 						 bindings = <
    &none    &none    &none    &none    &none   &none &none &none &none &none
-   &option_e DV_A    &option_e DV_O    &option_e DV_E    &option_e DV_U    &option_e DV_I     &none &none &none &option_n DV_N &none
+   &option_deadkey DV_E DV_A    &option_deadkey DV_E DV_O    &option_deadkey DV_E DV_E    &option_deadkey DV_E DV_U    &option_deadkey DV_E DV_I     &none &none &none &option_deadkey DV_N DV_N &none
    &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
                            &trans   &trans  &trans &trans
 					>;
@@ -144,7 +129,7 @@
 				shifted_accents_layer {
 						 bindings = <
    &none    &none    &none    &none    &none   &none &none &none &none &none
-   &shift_option_e DV_A    &shift_option_e DV_O    &shift_option_e DV_E    &shift_option_e DV_U    &shift_option_e DV_I     &none &none &none &shift_option_n DV_N &none
+   &option_deadkey DV_E LS(DV_A)    &option_deadkey DV_E LS(DV_O)    &option_deadkey DV_E LS(DV_E)    &option_deadkey DV_E LS(DV_U)    &option_deadkey DV_E LS(DV_I)     &none &none &none &option_deadkey DV_N LS(DV_N) &none
    &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
                            &trans   &trans  &trans &trans
 					>;
