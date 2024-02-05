@@ -12,163 +12,163 @@
 #define NAVETC 5
 
 / {
-        behaviors {
-            hm: homerow_mods {
-                compatible = "zmk,behavior-hold-tap";
-                label = "HOMEROW_MODS";
-                #binding-cells = <2>;
-                tapping_term_ms = <150>;
-                flavor = "tap-preferred";
-                bindings = <&kp>, <&kp>;
-            };
-        };
+  behaviors {
+hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+#binding-cells = <2>;
+      tapping_term_ms = <150>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
+  };
 };
 
 / {
-	macros {
-		deadkey_x_y: deadkey_x_y {
-			compatible = "zmk,behavior-macro-two-param";
-			#binding-cells = <2>;
-			bindings = <&macro_param_1to1 &kp LA(MACRO_PLACEHOLDER)>, <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
-		};
-	};
+  macros {
+deadkey_x_y: deadkey_x_y {
+               compatible = "zmk,behavior-macro-two-param";
+#binding-cells = <2>;
+               bindings = <&macro_param_1to1 &kp LA(MACRO_PLACEHOLDER)>, <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+             };
+  };
 };
 
 / {
-        combos {
-               compatible = "zmk,combos";
-               combo_enter {
-                           timeout-ms = <50>;
-                           key-positions = <6 7 8>;
-                           bindings = <&kp ENTER>;
-               };
-               combo_lock {
-                           timeout-ms = <50>;
-                           key-positions = <1 2 3>;
-                           bindings = <&kp LG(LC(DV_Q))>;
-               };
-			   combo_accents_deadkey_left {
-			               timeout-ms = <50>;
-						   key-positions = <21 22>;
-						   bindings = <&sl ACCENTS>;
-			   };
-			   combo_accents_deadkey_right {
-			               timeout-ms = <50>;
-						   key-positions = <27 28>;
-						   bindings = <&sl ACCENTS>;
-			   };
-			   combo_shifted_accents_deadkey_left {
-			               timeout-ms = <50>;
-						   key-positions = <21 22 23>;
-						   bindings = <&sl SHIFTED_ACCENTS>;
-			   };
-			   combo_shifted_accents_deadkey_right {
-			               timeout-ms = <50>;
-						   key-positions = <26 27 28>;
-						   bindings = <&sl SHIFTED_ACCENTS>;
-				
-			   };
-			   combo_capsword {
-						   timeout-ms = <50>;
-				           key-positions = <22 27>;
-						   bindings = <&caps_word>;
-			   };
-               combo_lpar {
-                           timeout-ms = <50>;
-                           key-positions = <2 3>;
-                           bindings = <&kp LPAR>;
-               };
-               combo_rpar {
-                           timeout-ms = <50>;
-                           key-positions = <6 7>;
-                           bindings = <&kp RPAR>;
-               };
-               combo_lbkt {
-                           timeout-ms = <50>;
-                           key-positions = <1 2>;
-                           bindings = <&kp DV_LBKT>;
-               };
-               combo_rbkt {
-                           timeout-ms = <50>;
-                           key-positions = <7 8>;
-                           bindings = <&kp DV_RBKT>;
-               };
-               combo_lbrc {
-                           timeout-ms = <50>;
-                           key-positions = <0 1>;
-                           bindings = <&kp DV_LBRC>;
-               };
-               combo_rbrc {
-                           timeout-ms = <50>;
-                           key-positions = <8 9>;
-                           bindings = <&kp DV_RBRC>;
-               };
-        };
+  combos {
+    compatible = "zmk,combos";
+    combo_enter {
+      timeout-ms = <50>;
+      key-positions = <6 7 8>;
+      bindings = <&kp ENTER>;
+    };
+    combo_lock {
+      timeout-ms = <50>;
+      key-positions = <1 2 3>;
+      bindings = <&kp LG(LC(DV_Q))>;
+    };
+    combo_accents_deadkey_left {
+      timeout-ms = <50>;
+      key-positions = <21 22>;
+      bindings = <&sl ACCENTS>;
+    };
+    combo_accents_deadkey_right {
+      timeout-ms = <50>;
+      key-positions = <27 28>;
+      bindings = <&sl ACCENTS>;
+    };
+    combo_shifted_accents_deadkey_left {
+      timeout-ms = <50>;
+      key-positions = <21 22 23>;
+      bindings = <&sl SHIFTED_ACCENTS>;
+    };
+    combo_shifted_accents_deadkey_right {
+      timeout-ms = <50>;
+      key-positions = <26 27 28>;
+      bindings = <&sl SHIFTED_ACCENTS>;
+
+    };
+    combo_capsword {
+      timeout-ms = <50>;
+      key-positions = <22 27>;
+      bindings = <&caps_word>;
+    };
+    combo_lpar {
+      timeout-ms = <50>;
+      key-positions = <2 3>;
+      bindings = <&kp LPAR>;
+    };
+    combo_rpar {
+      timeout-ms = <50>;
+      key-positions = <6 7>;
+      bindings = <&kp RPAR>;
+    };
+    combo_lbkt {
+      timeout-ms = <50>;
+      key-positions = <1 2>;
+      bindings = <&kp DV_LBKT>;
+    };
+    combo_rbkt {
+      timeout-ms = <50>;
+      key-positions = <7 8>;
+      bindings = <&kp DV_RBKT>;
+    };
+    combo_lbrc {
+      timeout-ms = <50>;
+      key-positions = <0 1>;
+      bindings = <&kp DV_LBRC>;
+    };
+    combo_rbrc {
+      timeout-ms = <50>;
+      key-positions = <8 9>;
+      bindings = <&kp DV_RBRC>;
+    };
+  };
 };
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+  keymap {
+    compatible = "zmk,keymap";
 
-                default_layer {
-                        bindings = <
-   &kp DV_SQT       &kp DV_COMMA  &kp DV_DOT    &kp DV_P      &kp DV_Y   &kp DV_F &kp DV_G      &kp DV_C      &kp DV_R      &kp DV_L
-   &kp DV_A         &kp DV_O      &kp DV_E      &kp DV_U      &kp DV_I   &kp DV_D &kp DV_H      &kp DV_T      &kp DV_N      &kp DV_S
-   &hm LALT DV_SEMI &hm LCTL DV_Q &hm LSFT DV_J &hm LGUI DV_K &kp DV_X   &kp DV_B &hm LGUI DV_M &hm LSFT DV_W &hm LCTL DV_V &hm LALT DV_Z
-                                                &lt NUMBERS BSPC &lt SYMBOLS TAB &lt NAVETC ESC &kp SPACE
+    default_layer {
+      bindings = <
+        &kp DV_SQT       &kp DV_COMMA  &kp DV_DOT    &kp DV_P      &kp DV_Y   &kp DV_F &kp DV_G      &kp DV_C      &kp DV_R      &kp DV_L
+        &kp DV_A         &kp DV_O      &kp DV_E      &kp DV_U      &kp DV_I   &kp DV_D &kp DV_H      &kp DV_T      &kp DV_N      &kp DV_S
+        &hm LALT DV_SEMI &hm LCTL DV_Q &hm LSFT DV_J &hm LGUI DV_K &kp DV_X   &kp DV_B &hm LGUI DV_M &hm LSFT DV_W &hm LCTL DV_V &hm LALT DV_Z
+        &lt NUMBERS BSPC &lt SYMBOLS TAB &lt NAVETC ESC &kp SPACE
 
-   &kp LG(LC(DV_Q)) // lock the computer
-   &kp ENTER // for like a center key like the reviung41
-                        >;
-                };
+        &kp LG(LC(DV_Q)) // lock the computer
+        &kp ENTER // for like a center key like the reviung41
+        >;
+    };
 
-				accents_layer {
-						 bindings = <
-   &none    &none    &none    &none    &none   &none &none &none &none &none
-   &deadkey_x_y LA(DV_E) DV_A    &deadkey_x_y LA(DV_E) DV_O    &deadkey_x_y LA(DV_E) DV_E    &deadkey_x_y LA(DV_E) DV_U    &deadkey_x_y LA(DV_E) DV_I     &none &none &none &deadkey_x_y LA(DV_N) DV_N &none
-   &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
-                           &trans   &trans  &trans &trans
-					>;
-				};
+    accents_layer {
+      bindings = <
+        &none    &none    &none    &none    &none   &none &none &none &none &none
+        &deadkey_x_y LA(DV_E) DV_A    &deadkey_x_y LA(DV_E) DV_O    &deadkey_x_y LA(DV_E) DV_E    &deadkey_x_y LA(DV_E) DV_U    &deadkey_x_y LA(DV_E) DV_I     &none &none &none &deadkey_x_y LA(DV_N) DV_N &none
+        &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
+        &trans   &trans  &trans &trans
+        >;
+    };
 
-				shifted_accents_layer {
-						 bindings = <
-   &none    &none    &none    &none    &none   &none &none &none &none &none
-   &deadkey_x_y LA(DV_E) LS(DV_A)    &deadkey_x_y LA(DV_E) LS(DV_O)    &deadkey_x_y LA(DV_E) LS(DV_E)    &deadkey_x_y LA(DV_E) LS(DV_U)    &deadkey_x_y LA(DV_E) LS(DV_I)     &none &none &none &deadkey_x_y LA(DV_N) LS(DV_N) &none
-   &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
-                           &trans   &trans  &trans &trans
-					>;
-				};
+    shifted_accents_layer {
+      bindings = <
+        &none    &none    &none    &none    &none   &none &none &none &none &none
+        &deadkey_x_y LA(DV_E) LS(DV_A)    &deadkey_x_y LA(DV_E) LS(DV_O)    &deadkey_x_y LA(DV_E) LS(DV_E)    &deadkey_x_y LA(DV_E) LS(DV_U)    &deadkey_x_y LA(DV_E) LS(DV_I)     &none &none &none &deadkey_x_y LA(DV_N) LS(DV_N) &none
+        &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
+        &trans   &trans  &trans &trans
+        >;
+    };
 
-                symbol_layer {
-                        bindings = <
-   &none    &none    &none    &none    &none   &kp DV_LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp DV_RBRC
-   &none    &none    &none    &none    &none   &kp DV_QMARK &kp DOLLAR &kp PERCENT &kp CARET &kp DV_PLUS
-   &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp TILDE    &kp EXCL   &kp AT      &kp HASH  &kp PIPE
-                           &trans   &trans     &kp RPAR   &kp DV_UNDER
+    symbol_layer {
+      bindings = <
+        &none    &none    &none    &none    &none   &kp DV_LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp DV_RBRC
+        &none    &none    &none    &none    &none   &kp DV_QMARK &kp DOLLAR &kp PERCENT &kp CARET &kp DV_PLUS
+        &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp TILDE    &kp EXCL   &kp AT      &kp HASH  &kp PIPE
+        &trans   &trans     &kp RPAR   &kp DV_UNDER
 
-                        >;
-                };
+        >;
+    };
 
-                number_layer {
-                        bindings = <
-   &none    &none    &none    &none    &none   &kp DV_LBKT &kp N7 &kp N8       &kp N9 &kp DV_RBKT
-   &none    &none    &none    &none    &none   &kp DV_FSLH &kp N4 &kp N5       &kp N6 &kp DV_EQUAL
-   &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp GRAVE   &kp N1 &kp N2       &kp N3 &kp BSLH
-                           &trans   &trans  &kp N0 &kp DV_MINUS
-                        >;
-                };
+    number_layer {
+      bindings = <
+        &none    &none    &none    &none    &none   &kp DV_LBKT &kp N7 &kp N8       &kp N9 &kp DV_RBKT
+        &none    &none    &none    &none    &none   &kp DV_FSLH &kp N4 &kp N5       &kp N6 &kp DV_EQUAL
+        &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp GRAVE   &kp N1 &kp N2       &kp N3 &kp BSLH
+        &trans   &trans  &kp N0 &kp DV_MINUS
+        >;
+    };
 
-                navetc_layer {
-                        bindings = <
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &none          &kp PG_UP     &kp HOME   &kp UP         &kp END      &none
-   &bt BT_CLR   &none        &kp LG(DV_LBRC) &kp LG(DV_RBRC) &none          &kp PG_DN     &kp LEFT   &kp DOWN       &kp RIGHT    &none
-   &out OUT_BLE &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &kp LG(LC(DV_Q)) &kp K_MUTE &kp C_VOL_DN   &kp C_VOL_UP &none
-                                           &trans         &trans        &trans     &trans
-                        >;
+    navetc_layer {
+      bindings = <
+        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &none          &kp PG_UP     &kp HOME   &kp UP         &kp END      &none
+        &bt BT_CLR   &none        &kp LG(DV_LBRC) &kp LG(DV_RBRC) &none          &kp PG_DN     &kp LEFT   &kp DOWN       &kp RIGHT    &none
+        &out OUT_BLE &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &kp LG(LC(DV_Q)) &kp K_MUTE &kp C_VOL_DN   &kp C_VOL_UP &none
+        &trans         &trans        &trans     &trans
+        >;
 
-                };
+    };
 
-        };
+  };
 };
 
