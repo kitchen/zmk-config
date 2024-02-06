@@ -13,10 +13,10 @@
 
 / {
   behaviors {
-hm: homerow_mods {
+    hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MODS";
-#binding-cells = <2>;
+      #binding-cells = <2>;
       tapping_term_ms = <150>;
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
@@ -26,11 +26,11 @@ hm: homerow_mods {
 
 / {
   macros {
-deadkey_x_y: deadkey_x_y {
-               compatible = "zmk,behavior-macro-two-param";
-#binding-cells = <2>;
-               bindings = <&macro_param_1to1 &kp LA(MACRO_PLACEHOLDER)>, <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
-             };
+    deadkey_x_y: deadkey_x_y {
+      compatible = "zmk,behavior-macro-two-param";
+      #binding-cells = <2>;
+      bindings = <&macro_param_1to1 &kp LA(MACRO_PLACEHOLDER)>, <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+    };
   };
 };
 
@@ -119,7 +119,7 @@ deadkey_x_y: deadkey_x_y {
 
         &kp LG(LC(DV_Q)) // lock the computer
         &kp ENTER // for like a center key like the reviung41
-        >;
+      >;
     };
 
     accents_layer {
@@ -128,7 +128,7 @@ deadkey_x_y: deadkey_x_y {
         &deadkey_x_y LA(DV_E) DV_A    &deadkey_x_y LA(DV_E) DV_O    &deadkey_x_y LA(DV_E) DV_E    &deadkey_x_y LA(DV_E) DV_U    &deadkey_x_y LA(DV_E) DV_I     &none &none &none &deadkey_x_y LA(DV_N) DV_N &none
         &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
         &trans   &trans  &trans &trans
-        >;
+      >;
     };
 
     shifted_accents_layer {
@@ -137,7 +137,7 @@ deadkey_x_y: deadkey_x_y {
         &deadkey_x_y LA(DV_E) LS(DV_A)    &deadkey_x_y LA(DV_E) LS(DV_O)    &deadkey_x_y LA(DV_E) LS(DV_E)    &deadkey_x_y LA(DV_E) LS(DV_U)    &deadkey_x_y LA(DV_E) LS(DV_I)     &none &none &none &deadkey_x_y LA(DV_N) LS(DV_N) &none
         &trans    &trans    &trans    &trans    &none   &none &trans &trans &trans &trans
         &trans   &trans  &trans &trans
-        >;
+      >;
     };
 
     symbol_layer {
@@ -147,7 +147,7 @@ deadkey_x_y: deadkey_x_y {
         &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp TILDE    &kp EXCL   &kp AT      &kp HASH  &kp PIPE
         &trans   &trans     &kp RPAR   &kp DV_UNDER
 
-        >;
+      >;
     };
 
     number_layer {
@@ -156,7 +156,7 @@ deadkey_x_y: deadkey_x_y {
         &none    &none    &none    &none    &none   &kp DV_FSLH &kp N4 &kp N5       &kp N6 &kp DV_EQUAL
         &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp GRAVE   &kp N1 &kp N2       &kp N3 &kp BSLH
         &trans   &trans  &kp N0 &kp DV_MINUS
-        >;
+      >;
     };
 
     navetc_layer {
@@ -165,7 +165,7 @@ deadkey_x_y: deadkey_x_y {
         &bt BT_CLR   &none        &kp LG(DV_LBRC) &kp LG(DV_RBRC) &none          &kp PG_DN     &kp LEFT   &kp DOWN       &kp RIGHT    &none
         &out OUT_BLE &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &kp LG(LC(DV_Q)) &kp K_MUTE &kp C_VOL_DN   &kp C_VOL_UP &none
         &trans         &trans        &trans     &trans
-        >;
+      >;
 
     };
 
