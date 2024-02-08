@@ -37,6 +37,7 @@ include:
       shield: reviung41
     - board: nice_nano_v2
       shield: reviung41
+    - board: cornholius_a
     - board: ahokore
     # my zaphod is a prototype and has different pins and I can't be arsed to figure it out at the moment
     # - board: zaphod

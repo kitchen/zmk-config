@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: kitchen
       url-base: https://github.com/kitchen
+    - name: ebastler
+      url-base: https://github.com/ebastler
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -15,6 +17,11 @@ manifest:
       remote: kitchen
       clone-depth: 1
       revision: kitchen/zmk-shield
+    - name: cornholius
+      remote: ebastler
+      repo-path: zmk-config
+      clone-depth: 1
+      revision: main
     - name: reviung34-zmk
       remote: kitchen
       clone-depth: 1
