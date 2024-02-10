@@ -39,67 +39,82 @@
     compatible = "zmk,combos";
     combo_enter {
       timeout-ms = <50>;
+      // index, middle, ring on top row right hand
       key-positions = <6 7 8>;
       bindings = <&kp ENTER>;
     };
     combo_lock {
       timeout-ms = <50>;
+      // index, middle, ring on top row left hand
       key-positions = <1 2 3>;
       bindings = <&kp LG(LC(DV_Q))>;
     };
     combo_accents_deadkey_left {
       timeout-ms = <50>;
+      // middle, ring on bottom row left hand
+      // note: I used to have this as index middle in same place but I use cmd-shift way too often,
       key-positions = <21 22>;
       bindings = <&sl ACCENTS>;
     };
     combo_accents_deadkey_right {
       timeout-ms = <50>;
+      // middle, ring on bottom row right hand
       key-positions = <27 28>;
       bindings = <&sl ACCENTS>;
     };
     combo_shifted_accents_deadkey_left {
       timeout-ms = <50>;
+      // index, middle, ring on bottom row left hand
       key-positions = <21 22 23>;
       bindings = <&sl SHIFTED_ACCENTS>;
     };
     combo_shifted_accents_deadkey_right {
       timeout-ms = <50>;
+      // index, middle, ring on bottom row right hand
       key-positions = <26 27 28>;
       bindings = <&sl SHIFTED_ACCENTS>;
-
     };
     combo_capsword {
       timeout-ms = <50>;
+      // middle fingers on both hands
+      // they are the shift keys, so hitting them both at once makes sense
+      // note that I don't actually use this at the moment because the way this functionality determines that I've typed a non-alpha character is not compatible with my dvorak layout, unless I do that actually on the keyboard. There's a PR or branch to try to work on that behavior, and I'll take a look at it at some point
       key-positions = <22 27>;
       bindings = <&caps_word>;
     };
     combo_lpar {
       timeout-ms = <50>;
+      // index middle top row left hand
       key-positions = <2 3>;
       bindings = <&kp LPAR>;
     };
     combo_rpar {
       timeout-ms = <50>;
+      // index middle top row right hand
       key-positions = <6 7>;
       bindings = <&kp RPAR>;
     };
     combo_lbkt {
       timeout-ms = <50>;
+      // middle ring top row left hand
       key-positions = <1 2>;
       bindings = <&kp DV_LBKT>;
     };
     combo_rbkt {
       timeout-ms = <50>;
+      // middle ring top row right hand
       key-positions = <7 8>;
       bindings = <&kp DV_RBKT>;
     };
     combo_lbrc {
       timeout-ms = <50>;
+      // ring pinky top row left hand
       key-positions = <0 1>;
       bindings = <&kp DV_LBRC>;
     };
     combo_rbrc {
       timeout-ms = <50>;
+      // ring pinky top row right hand
       key-positions = <8 9>;
       bindings = <&kp DV_RBRC>;
     };
