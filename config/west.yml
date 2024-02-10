@@ -17,9 +17,8 @@ manifest:
       remote: kitchen
       clone-depth: 1
       revision: kitchen/zmk-shield
-    - name: cornholius
-      remote: ebastler
-      repo-path: zmk-config
+    - name: zmk-cornholius
+      remote: kitchen
       clone-depth: 1
       revision: main
     - name: reviung34-zmk
