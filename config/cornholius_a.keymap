@@ -1,4 +1,6 @@
+/* vim: ft=devicetree */
 #include "standard-keymap.dtsi"
+#include <dt-bindings/zmk/matrix_transform.h>
 
 / {
   chosen {
