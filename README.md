@@ -16,3 +16,6 @@ Why even have keyboards that have keys that I don't use? I like building keyboar
 I also am a [dvorak layout](https://en.wikipedia.org/wiki/Dvorak_keyboard_layout) user, and I have a very difficult time keeping track of what dvorak key maps to qwerty in my head, so I created a [header file](config/dvorak-defines.h) that has a list of defines so I can put, e.g. `DV_H` in my keymap files and it'll spit out the correct qwerty code. Oh, and I map the keyboard to dvorak in software on the host side, not on the keyboard side. This is primarily because I am a laptop user and I want to be able to use the laptop's built in keyboard, and doing this means I don't have to constantly change the keymap around on the host when switching between custom external keyboard and built-in laptop keyboard. Also it means I can use *any* standard keyboard with my computer directly without switching the layout, as I do sometimes for gaming with my Apple Magic Keyboard.
 
 
+# License
+To the extent anything in this repo even *can* be licensed (it's mostly just config files, after all), I apply the [WTFPL](http://www.wtfpl.net) license. Note that there may be some stuff in here I copy/pasted from elsewhere which might be licensed differently, so do your research or whatever. I try to put license/copyright info in the files directly where applicable.
+
