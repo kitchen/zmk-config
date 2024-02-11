@@ -5,7 +5,7 @@ I daily a 34 key keyboard. It has plenty enough keys for me, for most things. Bu
 
 Except, I can!
 
-I have [one standard layout](config/standard-layout.dtsi) that I use. It has all of my combos, all of my modtaps and whatever other relevant configs.
+I have [one standard layout](config/standard-keymap.dtsi) that I use. It has all of my combos, all of my modtaps and whatever other relevant configs.
 
 I then use custom matrix transformations to apply them to keyboards. Examples: [kyria](config/kyria.keymap), [reviung41](config/reviung41.keymap). This way, when I update my keymap, I only have to update one place, and numbering for things like combos remains consistent. Any keys that are not part of my standard 34 key keymap are simply left unconfigured.
 
