@@ -17,6 +17,11 @@ manifest:
       remote: kitchen
       clone-depth: 1
       revision: kitchen/zmk-shield
+    - name: zmk-ahokore
+      remote: kitchen
+      repo-path: ahokore-zmk-config
+      clone-depth: 1
+      revision: kitchen/module-ify
     - name: zmk-cornholius
       remote: kitchen
       clone-depth: 1
