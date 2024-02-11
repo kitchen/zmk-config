@@ -22,10 +22,10 @@ manifest:
       repo-path: ahokore-zmk-config
       clone-depth: 1
       revision: kitchen/module-ify
-    - name: zmk-cornholius
+    - name: ebastler-zmk-config
       remote: kitchen
       clone-depth: 1
-      revision: main
+      revision: kitchen/module-ify
     - name: reviung34-zmk
       remote: kitchen
       clone-depth: 1
