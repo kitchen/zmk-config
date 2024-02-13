@@ -26,9 +26,5 @@ manifest:
       remote: kitchen
       clone-depth: 1
       revision: kitchen/module-ify
-    - name: reviung34-zmk
-      remote: kitchen
-      clone-depth: 1
-      revision: main
   self:
     path: config
