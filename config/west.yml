@@ -26,5 +26,9 @@ manifest:
       remote: kitchen
       clone-depth: 1
       revision: kitchen/module-ify
+    - name: zmk-bruce
+      remote: kitchen
+      clone-depth: 1
+      revision: main
   self:
     path: config
