@@ -34,7 +34,7 @@
     nice: nice {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = <&kp N6>, <&kp N9> <&kp N4> <&kp N2> <&kp N0>;
+      bindings = <&kp N6>, <&kp N9>, <&kp N4>, <&kp N2>, <&kp N0>;
     };
   };
 };
