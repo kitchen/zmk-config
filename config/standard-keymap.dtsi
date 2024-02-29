@@ -167,7 +167,8 @@
 
     number_layer {
       bindings = <
-        &none    &none    &none    &none    &none   &kp DV_LBKT &kp N7 &kp N8       &kp N9 &kp DV_RBKT
+        // for the memes
+        &kp N6   &kp N9   &kp N4   &kp N2   &kp N0  &kp DV_LBKT &kp N7 &kp N8       &kp N9 &kp DV_RBKT
         &none    &none    &none    &none    &none   &kp DV_FSLH &kp N4 &kp N5       &kp N6 &kp DV_EQUAL
         &kp LALT &kp LCTL &kp LSFT &kp LGUI &none   &kp GRAVE   &kp N1 &kp N2       &kp N3 &kp BSLH
         &trans   &trans  &kp N0 &kp DV_MINUS
