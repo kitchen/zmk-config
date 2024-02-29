@@ -31,6 +31,11 @@
       #binding-cells = <2>;
       bindings = <&macro_param_1to1 &kp LA(MACRO_PLACEHOLDER)>, <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
     };
+    nice: nice {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp N6>, <&kp N9> <&kp N4> <&kp N2> <&kp N0>;
+    };
   };
 };
 
@@ -177,7 +182,7 @@
 
     navetc_layer {
       bindings = <
-        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &none          &kp PG_UP     &kp HOME   &kp UP         &kp END      &none
+        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3    &none          &kp PG_UP     &kp HOME   &kp UP         &kp END      &nice
         &bt BT_CLR   &none        &kp LG(DV_LBRC) &kp LG(DV_RBRC) &none          &kp PG_DN     &kp LEFT   &kp DOWN       &kp RIGHT    &none
         &out OUT_BLE &none        &kp LG(DV_LBKT) &kp LG(DV_RBKT) &none          &kp LG(LC(DV_Q)) &kp K_MUTE &kp C_VOL_DN   &kp C_VOL_UP &none
         &trans         &trans        &trans     &trans
