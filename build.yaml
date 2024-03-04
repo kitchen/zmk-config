@@ -46,9 +46,9 @@ include:
     #   shield: banana
     # - board: nice_nano_v2
     #   shield: reviung34
-    # - board: nice_nano_v2
-    #   shield: reviung34 nicehatharry nice_view
-    #   artifact-name: reviung34_nice_view
+    - board: nice_nano_v2
+      shield: reviung34 nicehatharry nice_view
+      artifact-name: reviung34_nice_view
     # - board: nice_nano_v2
     #   shield: osprette
     # - board: nice_nano_v2
