@@ -29,7 +29,7 @@
     deadkey_x_y: deadkey_x_y {
       compatible = "zmk,behavior-macro-two-param";
       #binding-cells = <2>;
-      bindings = <&macro_param_1to1 &kp LA(MACRO_PLACEHOLDER)>, <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+      bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>, <&macro_param_2to1 &kp MACRO_PLACEHOLDER>;
     };
     nice: nice {
       compatible = "zmk,behavior-macro";
